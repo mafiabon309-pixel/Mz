@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Muhammad Moaiz! 🎉🔥</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0b0f19;
+            color: #ffffff;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Background Image with Blur Effect */
+        .bg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('Screenshot_2026-10-26-21-08-57-79.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px) brightness(0.3);
+            z-index: 0;
+        }
+
+        /* Floating Background Animations */
+        .bg-animations {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            font-size: 24px;
+            animation: floatUp 6s linear infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(100vh) scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-10vh) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        /* Main Container */
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* Header Animation */
+        header h1 {
+            font-size: 3rem;
+            color: #ffcc00;
+            text-shadow: 0 0 20px rgba(255, 204, 0, 0.8), 0 0 40px #ff4500;
+            animation: titleGlow 2s ease-in-out infinite alternate;
+            margin-bottom: 10px;
+        }
+
+        @keyframes titleGlow {
+            from {
+                text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff4500;
+                transform: scale(1);
+            }
+            to {
+                text-shadow: 0 0 25px #ffcc00, 0 0 50px #ffaa00;
+                transform: scale(1.03);
+            }
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #00ffcc;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Main Moaiz Photo Showcase Section */
+        .moaiz-photo-section {
+            margin: 30px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .moaiz-main-card {
+            background: linear-gradient(135deg, #1f293d, #111827);
+            border: 3px solid #ffcc00;
+            border-radius: 20px;
+            padding: 15px;
+            max-width: 380px;
+            width: 100%;
+            box-shadow: 0 0 25px rgba(255, 204, 0, 0.6);
+            animation: cardBounce 3s ease-in-out infinite alternate;
+        }
+
+        .moaiz-main-card img {
+            width: 100%;
+            height: auto;
+            max-height: 450px;
+            object-fit: contain;
+            border-radius: 15px;
+            border: 2px solid #ff4500;
+        }
+
+        .moaiz-main-card h3 {
+            margin-top: 15px;
+            color: #00ffcc;
+            font-size: 1.5rem;
+            text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+        }
+
+        @keyframes cardBounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
+
+        /* Free Fire Banner Section */
+        .ff-banner {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .ff-card {
+            background: linear-gradient(135deg, #1f293d, #111827);
+            border: 2px solid #ff4500;
+            border-radius: 15px;
+            padding: 15px;
+            width: 180px;
+            box-shadow: 0 0 15px rgba(255, 69, 0, 0.4);
+        }
+
+        .ff-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 1px solid #ffcc00;
+        }
+
+        .ff-card h3 {
+            margin-top: 10px;
+            color: #ffcc00;
+            font-size: 1rem;
+        }
+
+        /* Long Heartfelt Message Box */
+        .message-box {
+            background: rgba(17, 24, 39, 0.9);
+            border: 2px dashed #00ffcc;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 0 25px rgba(0, 255, 204, 0.2);
+            text-align: left;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .message-box h2 {
+            text-align: center;
+            color: #ff4500;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            text-shadow: 0 0 10px rgba(255, 69, 0, 0.6);
+        }
+
+        .message-box p {
+            margin-bottom: 15px;
+            color: #e2e8f0;
+        }
+
+        /* Cake & Celebration Section */
+        .cake-section {
+            margin: 40px 0;
+            font-size: 5rem;
+            animation: bounceCake 1.5s infinite;
+        }
+
+        @keyframes bounceCake {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        /* Footer / Creator Credit */
+        footer {
+            margin-top: 50px;
+            color: #94a3b8;
+            font-size: 0.9rem;
+            border-top: 1px solid #1f293d;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Image Overlay with Blur -->
+    <div class="bg-overlay"></div>
+
+    <!-- Dynamic Background Floating Emojis -->
+    <div class="bg-animations" id="bgAnimations"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="subtitle">🔥 Booyah! Happy Birthday 🔥</div>
+            <h1>MUHAMMAD MOAIZ</h1>
+        </header>
+
+        <!-- Main Photo Provided by User (Named Moaiz) -->
+        <div class="moaiz-photo-section">
+            <div class="moaiz-main-card">
+                <img src="Screenshot_2026-10-26-21-08-57-79.jpg" alt="Muhammad Moaiz">
+                <h3>👑 Muhammad Moaiz 👑</h3>
+            </div>
+        </div>
+
+        <!-- Free Fire Characters Showcase -->
+        <div class="ff-banner">
+            <div class="ff-card">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=400&q=80" alt="Free Fire Character">
+                <h3>🎮 Alok Elite</h3>
+            </div>
+            <div class="ff-card">
+                <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=400&q=80" alt="Free Fire Character">
+                <h3>🎯 Kelly Dash</h3>
+            </div>
+        </div>
+
+        <!-- Birthday Cake Animation -->
+        <div class="cake-section">
+            🎂🎁🎈
+        </div>
+
+        <!-- Lamba Sa Pyara Message -->
+        <div class="message-box">
+            <h2>To My Dearest Brother, Moaiz! ❤️</h2>
+            <p>Dear Moaiz, aaj ka din hamari family ke liye sabse special din hai kyunki aaj ke hi din meri zindagi ka sabse pyara aur chhota bhai is duniya mein aaya tha. Allah tala aapko lambi zindagi, sehat, aur behtareen kamyabi ata farmaye!</p>
+            <p>Chahe hum kitni bhi masti karein ya ladaai karein, sach toh yeh hai ke aap meri taakat ho. Free Fire ke battlefield mein jaise tum har round jeetne ke liye poori jaan laga dete ho, waise hi apni real life ke har maidan mein tum hamesha victorious raho aur har mushkil ko defeat kar do!</p>
+            <p>Hamesha haste muskurate raho, apne saare sapne poore karo aur apnay bhai ka naam roshan karo. Tumhari har khushi hamare liye sabse zyada important hai. Aaj ke din khoob enjoy karo, cake khao aur party karo!</p>
+            <p style="text-align: right; font-weight: bold; color: #ffcc00; margin-top: 20px;">— Lots of Love & Best Wishes! 🌟</p>
+        </div>
+
+        <footer>
+            <p>Designed with ❤️ specially for Muhammad Moaiz's Birthday | Booyah! 🎉</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript to Generate Floating Background Emojis & Animations -->
+    <script>
+        const emojis = ['🎉', '🔥', '🎂', '🎈', '⭐', '🎁', '⚡', '💖', '🎮'];
+        const bgContainer = document.getElementById('bgAnimations');
+
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+            
+            particle.style.left = Math.random() * 100 + 'vw';
+            particle.style.animationDuration = (Math.random() * 3 + 4) + 's';
+            particle.style.fontSize = (Math.random() * 20 + 15) + 'px';
+            
+            bgContainer.appendChild(particle);
+
+            setTimeout(() => {
+                particle.remove();
+            }, 7000);
+        }
+
+        setInterval(createParticle, 300);
+    </script>
+</body>
+</html>
